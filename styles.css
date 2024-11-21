@@ -2,19 +2,35 @@
   height: vh;
   width: vw;
   background-color: #5a4838;
+  position: fixed;
 }
 
-#oval-part {
-  height: 2rem;
-  width: 1rem;
-  border-radius: 45%;
+#balloon-space {
+  height: vh;
+  width: vw;
+  position: fixed;
 }
 
-#triangle-part {
-  height: .3rem;
-  width: .3rem;
+#balloons {
+  position: fixed;
 }
 
 #balloon1 {
   color: blueviolet;
+}
+
+#balloon2 {
+  color: blue;
+}
+
+#balloon3 {
+  color: red;
+}
+
+#balloon4 {
+  color: green;
+}
+
+#balloon5 {
+  color: aqua;
 }
