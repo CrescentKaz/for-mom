@@ -1,4 +1,6 @@
-#background-color {
+#background {
+  height: vh;
+  width: vw;
   background-color: #5a4838;
 }
 
