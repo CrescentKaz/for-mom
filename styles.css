@@ -1,19 +1,22 @@
 #background {
-  height: vh;
-  width: vw;
+  height: 100%;
+  width: 100%;
   background-color: #5a4838;
+  color: #37be43;
   position: absolute;
   z-index: -1;
 }
 
 #balloon-space {
-  height: vh;
-  width: vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
 }
 
 #balloons {
   position: absolute;
+  height: 15px;
+  width: 10px;
 }
 
 #balloon1 {
