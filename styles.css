@@ -2,7 +2,8 @@
   height: vh;
   width: vw;
   background-color: #5a4838;
-  position: fixed;
+  position: absolute;
+  z-index: -1;
 }
 
 #balloon-space {
@@ -12,26 +13,30 @@
 }
 
 #balloons {
-  position: fixed;
+  position: absolute;
 }
 
 #balloon1 {
-  color: blueviolet;
-  top: 5vh;
+  background-color: blueviolet;
+  top: 5em;
 }
 
 #balloon2 {
-  color: blue;
+  background-color: blue;
+  top: 10em;
 }
 
 #balloon3 {
-  color: red;
+  background-color: red;
+  top: 15em;
 }
 
 #balloon4 {
-  color: green;
+  background-color: green;
+  top: 20em;
 }
 
 #balloon5 {
-  color: aqua;
+  background-color: aqua;
+  top: 25em;
 }
