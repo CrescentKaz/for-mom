@@ -1,45 +1,62 @@
+main {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: absolute;
+}
+
 #background {
   height: 100%;
   width: 100%;
   background-color: #5a4838;
   color: #37be43;
   position: absolute;
+  z-index: -2;
+}
+
+#background-confetti {
   z-index: -1;
+}
+
+h1, h2 {
+  margin: 5vh auto 0px;
+  padding: 10px;
 }
 
 #balloon-space {
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: relative;
 }
 
-#balloons {
+.balloons {
   position: absolute;
-  height: 15px;
-  width: 10px;
+  height: 50px;
+  width: 25px;
 }
 
 #balloon1 {
   background-color: blueviolet;
-  top: 5em;
+  top: 50px;
 }
 
 #balloon2 {
   background-color: blue;
-  top: 10em;
+  top: 100px;
 }
 
 #balloon3 {
   background-color: red;
-  top: 15em;
+  top: 150px;
 }
 
 #balloon4 {
   background-color: green;
-  top: 20em;
+  top: 200px;
 }
 
 #balloon5 {
   background-color: aqua;
-  top: 25em;
+  top: 250px;
 }
