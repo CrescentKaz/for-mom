@@ -22,17 +22,18 @@ main {
 }
 
 h1, h2 {
-  padding-left: calc(50%-(315px/2));
   display: block;
+  z-index: -1;
+  width: auto;
 }
 
 h1 {
-  min-width: 315px;
-  margin-top: 50%;
+  margin-top: 45vh;
+  margin-left: 30vw;
 }
 
 h2 {
-  min-width: 110px;
+  margin-left: 45vw;
 }
 
 #balloon-space {
@@ -47,25 +48,30 @@ h2 {
 
 #balloon1 {
   background-color: blueviolet;
-  top: 50px;
+  top: 27vh;
+  left: 12vw;
 }
 
 #balloon2 {
   background-color: blue;
-  top: 100px;
+  top: 15vh;
+  left: 50vw;
 }
 
 #balloon3 {
   background-color: red;
-  top: 150px;
+  top: 27vh;
+  left:78vw;
 }
 
 #balloon4 {
   background-color: green;
-  top: 200px;
+  top: 70vh;
+  left: 27vw;
 }
 
 #balloon5 {
   background-color: aqua;
-  top: 250px;
+  top: 76vh;
+  left: 64vw;
 }
