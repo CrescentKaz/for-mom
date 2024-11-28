@@ -8,6 +8,7 @@ const balloon3 = document.querySelector("#balloon3");
 const balloon4 = document.querySelector("#balloon4");
 const balloon5 = document.querySelector("#balloon5");
 
+/*
 function balloonMove() {
     style.left = "leftMove vw";
     style.top = "topMove vh";
@@ -18,3 +19,6 @@ function balloonMove() {
  balloon3.addEventListener("click", balloonMove());
  balloon4.addEventListener("click", balloonMove());
  balloon5.addEventListener("click", balloonMove());
+*/
+
+ balloon5.addEventListener("click", function() {balloon5.style.top = "topMove vh"; balloon5.style.left = "leftMove vw"});

@@ -18,14 +18,20 @@ main {
   height: 100%;
   width: 100%;
   background-color: #5a4838;
-  color: #37be43;
+  color: goldenrod;
   position: absolute;
   z-index: -2;
 }
 
 #background-confetti {
   position: absolute;
+  object-fit: fill;
   z-index: -1;
+}
+
+#background-confetti > img {
+  width: 100%;
+  height: 100%;
 }
 
 h1, h2 {
@@ -53,37 +59,36 @@ h2 {
   width: 15vw;
 }
 
+.balloons:hover {
+  transform: scaleX(-1);
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
 #balloon1 {
-  background-color: blueviolet;
   top: 27vh;
   left: 8vw;
 }
 
 #balloon2 {
-  background-color: lightblue;
   top: 15vh;
   left: 50vw;
 }
 
 #balloon3 {
-  background-color: red;
   top: 27vh;
   left:78vw;
 }
 
 #balloon4 {
-  background-color: green;
   top: 70vh;
   left: 27vw;
 }
 
 #balloon5 {
-  background-color: pink;
   top: 76vh;
   left: 64vw;
 }
