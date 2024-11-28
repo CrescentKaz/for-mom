@@ -2,17 +2,19 @@ let balloonLocation = [Math.floor(Math.random())*100, Math.floor(Math.random())*
 let leftMove = balloonLocation[0];
 let topMove = balloonLocation[1];
 
-const balloon1 = document.querySelector("#balloon1");
+const balloon1 = document.getElementById("#balloon1");
 const balloon2 = document.querySelector("#balloon2");
 const balloon3 = document.querySelector("#balloon3");
 const balloon4 = document.querySelector("#balloon4");
 const balloon5 = document.querySelector("#balloon5");
 
-function balloonMove(whichBalloon) {
-    whichBalloon.style.left = "leftMove vw";
-    whichBalloon.style.top = "topMove vh";
+function balloonMove() {
+    style.left = "leftMove vw";
+    style.top = "topMove vh";
 }
 
-
-
-// balloon1.addEventListener(onclick, top = x, left = y);
+ balloon1.addEventListener("click", balloonMove());
+ balloon2.addEventListener("click", balloonMove());
+ balloon3.addEventListener("click", balloonMove());
+ balloon4.addEventListener("click", balloonMove());
+ balloon5.addEventListener("click", balloonMove());
