@@ -69,6 +69,7 @@ h2 {
   transform: scaleX(-1);
   width: 20vw;
   rotate: 360deg;
+}
 
 img {
   max-width: 100%;
