@@ -60,11 +60,15 @@ h2 {
   position: absolute;
   box-sizing: border-box;
   width: 15vw;
+  transition:
+    width 2s,
+    rotate 2s;
 }
 
 .balloons:hover {
   transform: scaleX(-1);
-}
+  width: 20vw;
+  rotate: 360deg;
 
 img {
   max-width: 100%;
