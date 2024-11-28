@@ -12,7 +12,7 @@ function moveLocation(ball) {
     ball.style.left = Math.floor(Math.random()*100) + "vw";
 }
 
-balloon1.addEventListener("click", function(balloon1){console.log(move)});
+balloon1.addEventListener("click", function(balloon1){console.log(move);});
 
 /*
 balloon1.addEventListener("click", function() {balloon1.style.top = move+"vh"; balloon1.style.left = move+"vw"});
