@@ -2,6 +2,7 @@ body {
   padding: 0;
   border: 0;
   margin: 0;
+  background-color: black;
 }
 
 main {
@@ -17,7 +18,7 @@ main {
 #background {
   height: 100%;
   width: 100%;
-  background-color: #5a4838;
+  background-color: black;
   color: goldenrod;
   position: absolute;
   z-index: -2;
@@ -25,6 +26,8 @@ main {
 
 #background-confetti {
   position: absolute;
+  height: 100%;
+  width: 100%;
   object-fit: fill;
   z-index: -1;
 }
