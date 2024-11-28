@@ -7,7 +7,7 @@ const balloon3 = document.getElementById("#balloon3");
 const balloon4 = document.getElementById("#balloon4");
 const balloon5 = document.getElementById("#balloon5");
 
-balloon1.addEventListener("click", function() {balloon1.style.top = "move"; balloon1.style.left = "move"});
+balloon1.addEventListener("click", function() {balloon1.style.top = move+"vh"; balloon1.style.left = move+"vw"});
 balloon2.addEventListener("click", function() {balloon2.style.top = "move"; balloon2.style.left = "move"});
 balloon3.addEventListener("click", function() {balloon3.style.top = "move"; balloon3.style.left = "move"});
 balloon4.addEventListener("click", function() {balloon4.style.top = "move"; balloon4.style.left = "move"});
