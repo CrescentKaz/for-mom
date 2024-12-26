@@ -1,23 +1,23 @@
 let move = Math.floor(Math.random()*100);
 console.log(move);
 
-const balloon1 = document.getElementById("#balloon1");
-const balloon2 = document.getElementById("#balloon2");
-const balloon3 = document.getElementById("#balloon3");
-const balloon4 = document.getElementById("#balloon4");
-const balloon5 = document.getElementById("#balloon5");
+const decor1 = document.getElementById("#decor1");
+const decor2 = document.getElementById("#decor2");
+const decor3 = document.getElementById("#decor3");
+const decor4 = document.getElementById("#decor4");
+const decor5 = document.getElementById("#decor5");
 
 function moveLocation(ball) {
     ball.style.top = move + "vh"; 
     ball.style.left = Math.floor(Math.random()*100) + "vw";
 }
 
-balloon1.addEventListener("click", function(balloon1){console.log(move);});
+decor1.addEventListener("click", function(decor1){console.log(move);});
 
 /*
-balloon1.addEventListener("click", function() {balloon1.style.top = move+"vh"; balloon1.style.left = move+"vw"});
-balloon2.addEventListener("click", function() {balloon2.style.top = "move"; balloon2.style.left = "move"});
-balloon3.addEventListener("click", function() {balloon3.style.top = "move"; balloon3.style.left = "move"});
-balloon4.addEventListener("click", function() {balloon4.style.top = "move"; balloon4.style.left = "move"});
-balloon5.addEventListener("click", function() {balloon5.style.top = "move"; balloon5.style.left = "move"});
+decor1.addEventListener("click", function() {decor1.style.top = move+"vh"; decor1.style.left = move+"vw"});
+decor2.addEventListener("click", function() {decor2.style.top = "move"; decor2.style.left = "move"});
+decor3.addEventListener("click", function() {decor3.style.top = "move"; decor3.style.left = "move"});
+decor4.addEventListener("click", function() {decor4.style.top = "move"; decor4.style.left = "move"});
+decor5.addEventListener("click", function() {decor5.style.top = "move"; decor5.style.left = "move"});
 */
