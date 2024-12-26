@@ -12,7 +12,7 @@ function moveLocation(ball) {
     ball.style.left = Math.floor(Math.random()*100) + "vw";
 }
 
-decor1.addEventListener("click", function(decor1){console.log(move);});
+decor1.addEventListener("click", moveLocation(decor1){console.log(move);});
 
 /*
 decor1.addEventListener("click", function() {decor1.style.top = move+"vh"; decor1.style.left = move+"vw"});
