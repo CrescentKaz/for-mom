@@ -13,15 +13,15 @@ const day = today.getDate();
 const month = today.getMonth()+1;
 const year = today.getFullYear();
 
+/*
+decor1.addEventListener("click", moveLocation(decor1));
+console.log(move);
+
 function moveLocation(ball) {
     ball.style.top = move + "vh"; 
     ball.style.left = Math.floor(Math.random()*100) + "vw";
 }
 
-decor1.addEventListener("click", moveLocation(decor1));
-console.log(move);
-
-/*
 decor1.addEventListener("click", function() {decor1.style.top = move+"vh"; decor1.style.left = move+"vw"});
 decor2.addEventListener("click", function() {decor2.style.top = "move"; decor2.style.left = "move"});
 decor3.addEventListener("click", function() {decor3.style.top = "move"; decor3.style.left = "move"});
