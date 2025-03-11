@@ -39,15 +39,15 @@ if (month === 1) {
 } else if (month === 3) {
     holiday_name.innerText = "Happy St. Patrick's Day";
     holiday_tagline.innerText = "May luck be with you";
-} else if (month === 4) {
-    holiday_name.innerText = "Happy April Fools!";
-    holiday_tagline.innerText = "April showers bring May flowers~";
     decor1.src = "./images/green.png";
     decor2.src = "./images/green.png";
     decor3.src = "./images/green.png";
     decor4.src = "./images/green.png";
     decor5.src = "./images/green.png";
     background_image.src = "./images/gold_confetti_fountains.gif";
+} else if (month === 4) {
+    holiday_name.innerText = "Happy April Fools!";
+    holiday_tagline.innerText = "April showers bring May flowers~";
 } else if (month === 5) {
     if (day === 4) {
         holiday_name.innerText = "May the fourth be with you.";
