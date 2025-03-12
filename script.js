@@ -1,12 +1,12 @@
 let move = Math.floor(Math.random()*100);
 console.log(move);
 
-const decor1 = document.getElementById("#decor1");
-const decor2 = document.getElementById("#decor2");
-const decor3 = document.getElementById("#decor3");
-const decor4 = document.getElementById("#decor4");
-const decor5 = document.getElementById("#decor5");
-const background_image = document.getElementById("#background-image");
+const decor1 = document.getElementById("decor1");
+const decor2 = document.getElementById("decor2");
+const decor3 = document.getElementById("decor3");
+const decor4 = document.getElementById("decor4");
+const decor5 = document.getElementById("decor5");
+const background_image = document.getElementById("background-image");
 
 const today = new Date();
 const day = today.getDate();
