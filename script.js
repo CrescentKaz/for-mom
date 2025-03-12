@@ -133,4 +133,10 @@ if (month === 1) {
 } else {
     holiday_name.innerText = "Error";
     holiday_tagline.innerText = "Contact the Dev and let them know the month didn't register correctly.";
+    decor1.src = "";
+    decor2.src = "";
+    decor3.src = "";
+    decor4.src = "";
+    decor5.src = "";
+    background_image.src = "./images/No_Image.PNG";
 };
