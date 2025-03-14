@@ -32,18 +32,11 @@ main {
 }
 
 h1, h2 {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: -1;
   width: auto;
-}
-
-h1 {
-  margin-top: 45vh;
-  margin-left: 30vw;
-}
-
-h2 {
-  margin-left: 45vw;
 }
 
 #decor-space {
