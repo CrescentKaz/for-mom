@@ -140,3 +140,40 @@ if (month === 1) {
     decor5.src = "";
     background_image.src = "./images/No_Image.PNG";
 };
+
+/*
+window.onload = function() {
+  // Get the current month (0-11, where 0 = January, 11 = December)
+  const currentMonth = new Date().getMonth(); 
+
+  // Define an array with folder names for each month
+  const months = [
+    'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 
+    'september', 'october', 'november', 'december'
+  ];
+
+  // Define the folder path (assumed to be in the "images" folder)
+  const folderPath = '/images/' + months[currentMonth] + '/';
+
+  // Function to pick a random image from the folder
+  function getRandomImage(folder) {
+    // Fetch the list of image files in the folder (hardcoded list for example purposes)
+    // In a real application, you may need to fetch the list of files dynamically using server-side scripting
+    const images = [
+      'image1.jpg', 'image2.jpg', 'image3.jpg', // Add your image names here
+    ];
+
+    // Pick a random image
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+
+    // Return the full URL to the image
+    return folder + randomImage;
+  }
+
+  // Get the random image URL for the current month
+  const backgroundImageUrl = getRandomImage(folderPath);
+
+  // Set the background image of the body or any element
+  document.body.style.backgroundImage = `url('${backgroundImageUrl}')`;
+};
+*/
