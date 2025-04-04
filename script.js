@@ -1,6 +1,3 @@
-let move = Math.floor(Math.random()*100);
-console.log(move);
-
 const decor1 = document.getElementById("decor1");
 const decor2 = document.getElementById("decor2");
 const decor3 = document.getElementById("decor3");
@@ -13,20 +10,27 @@ const day = today.getDate();
 const month = today.getMonth()+1;
 const year = today.getFullYear();
 
-/*
 decor1.addEventListener("click", moveLocation(decor1));
-console.log(move);
 
-function moveLocation(ball) {
-    ball.style.top = move + "vh"; 
-    ball.style.left = Math.floor(Math.random()*100) + "vw";
-}
+function moveLocation(item) {
+    const currentLeft = parseInt(item.tyle.left || 0);
+    const currentTop = parseInt(item.style.top || 0);
+    const newLeft = Math.floor(Math.random() * (window.innerWidth - item.width));
+    const newTop = Math.floor(Math.random() * (window.innerHeight - item.height));
+    item.style.left = newLeft + "px"; 
+    item.style.top = newTop + "px";
+} 
 
-decor1.addEventListener("click", function() {decor1.style.top = move+"vh"; decor1.style.left = move+"vw"});
+/*
 decor2.addEventListener("click", function() {decor2.style.top = "move"; decor2.style.left = "move"});
 decor3.addEventListener("click", function() {decor3.style.top = "move"; decor3.style.left = "move"});
 decor4.addEventListener("click", function() {decor4.style.top = "move"; decor4.style.left = "move"});
 decor5.addEventListener("click", function() {decor5.style.top = "move"; decor5.style.left = "move"});
+
+// remants of the moveLocation function 
+    item.style.top = move + "vh"; 
+    item.style.left = Math.floor(Math.random()*100) + "vw";
+}
 */
 
 if (month === 1) {
