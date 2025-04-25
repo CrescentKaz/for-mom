@@ -6,10 +6,26 @@ const decor5 = document.getElementById("decor5");
 const background_image = document.getElementById("background-image");
 
 const today = new Date();
-const day = today.getDate();
+const day = today.getDate()+1;
 const month = today.getMonth()+1;
+const monthFolder = today.getMonth();
 const year = today.getFullYear();
+const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+const folderPath = "/images/" + months[monthFolder] + "/";
+const backgroundImageUrl = getRandomImage(folderPath);
 
+/*
+document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
+*/
+
+function getRandomImage(folder) {
+// images are hard-coded. need to find a way to generate this automatically. iterate over a loop? might have issues with access to the folder contents
+    const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    return folder + randomImage;
+}
+
+// the line below still isn't triggering
 decor1.addEventListener("click", moveLocation(decor1));
 
 function moveLocation(item) {
@@ -19,6 +35,7 @@ function moveLocation(item) {
     const newTop = Math.floor(Math.random() * (window.innerHeight - item.height));
     item.style.left = newLeft + "px"; 
     item.style.top = newTop + "px";
+    console.log("moveLocation triggered for " + item)
 } 
 
 /*
@@ -26,11 +43,6 @@ decor2.addEventListener("click", function() {decor2.style.top = "move"; decor2.s
 decor3.addEventListener("click", function() {decor3.style.top = "move"; decor3.style.left = "move"});
 decor4.addEventListener("click", function() {decor4.style.top = "move"; decor4.style.left = "move"});
 decor5.addEventListener("click", function() {decor5.style.top = "move"; decor5.style.left = "move"});
-
-// remants of the moveLocation function 
-    item.style.top = move + "vh"; 
-    item.style.left = Math.floor(Math.random()*100) + "vw";
-}
 */
 
 if (month === 1) {
@@ -144,40 +156,3 @@ if (month === 1) {
     decor5.src = "";
     background_image.src = "./images/No_Image.PNG";
 };
-
-/*
-window.onload = function() {
-  // Get the current month (0-11, where 0 = January, 11 = December)
-  const currentMonth = new Date().getMonth(); 
-
-  // Define an array with folder names for each month
-  const months = [
-    'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 
-    'september', 'october', 'november', 'december'
-  ];
-
-  // Define the folder path (assumed to be in the "images" folder)
-  const folderPath = '/images/' + months[currentMonth] + '/';
-
-  // Function to pick a random image from the folder
-  function getRandomImage(folder) {
-    // Fetch the list of image files in the folder (hardcoded list for example purposes)
-    // In a real application, you may need to fetch the list of files dynamically using server-side scripting
-    const images = [
-      'image1.jpg', 'image2.jpg', 'image3.jpg', // Add your image names here
-    ];
-
-    // Pick a random image
-    const randomImage = images[Math.floor(Math.random() * images.length)];
-
-    // Return the full URL to the image
-    return folder + randomImage;
-  }
-
-  // Get the random image URL for the current month
-  const backgroundImageUrl = getRandomImage(folderPath);
-
-  // Set the background image of the body or any element
-  document.body.style.backgroundImage = `url('${backgroundImageUrl}')`;
-};
-*/
