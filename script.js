@@ -18,15 +18,17 @@ const backgroundImageUrl = getRandomImage(folderPath);
 document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
 */
 
+/*
 function getRandomImage(folder) {
 // images are hard-coded. need to find a way to generate this automatically. iterate over a loop? might have issues with access to the folder contents
     const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     return folder + randomImage;
 }
+*/
 
 // the line below still isn't triggering
-decor1.addEventListener("click", moveLocation(decor1));
+// decor1.addEventListener("click", moveLocation(decor1));
 
 function moveLocation(item) {
     const currentLeft = parseInt(item.style.left || 0);
@@ -38,13 +40,6 @@ function moveLocation(item) {
     console.log("moveLocation triggered for " + item)
 } 
 
-/*
-decor2.addEventListener("click", function() {decor2.style.top = "move"; decor2.style.left = "move"});
-decor3.addEventListener("click", function() {decor3.style.top = "move"; decor3.style.left = "move"});
-decor4.addEventListener("click", function() {decor4.style.top = "move"; decor4.style.left = "move"});
-decor5.addEventListener("click", function() {decor5.style.top = "move"; decor5.style.left = "move"});
-*/
-
 if (month === 1) {
     holiday_name.innerText = "Happy New Year!";
     holiday_tagline.innerText = year;
@@ -52,6 +47,11 @@ if (month === 1) {
 } else if (month === 2) {
     holiday_name.innerText = "Happy Valentine's Day";
     holiday_tagline.innerText = "OXO <3 <3 <3 XOX";
+    decor1.src = "./images/red.png";
+    decor2.src = "./images/pink.png";
+    decor3.src = "./images/red.png";
+    decor4.src = "./images/pink.png";
+    decor5.src = "./images/red.png";
 } else if (month === 3) {
     holiday_name.innerText = "Happy St. Patrick's Day";
     holiday_tagline.innerText = "May luck be with you";
@@ -62,17 +62,35 @@ if (month === 1) {
     decor5.src = "./images/green.png";
     background_image.src = "./images/gold_confetti_fountains.gif";
 } else if (month === 4) {
-    holiday_name.innerText = "Happy April Fools!";
-    holiday_tagline.innerText = "April showers bring May flowers~";
+    if (day === 1) {
+        holiday_name.innerText = "Happy April Fools!";
+    } else {
+        holiday_tagline.innerText = "April showers bring May flowers~";
+    };
+    decor1.src = "./images/blue.png";
+    decor2.src = "./images/green.png";
+    decor3.src = "./images/pink.png";
+    decor4.src = "./images/orange.png";
+    decor5.src = "./images/purple.png";
 } else if (month === 5) {
     if (day === 4) {
         holiday_name.innerText = "May the fourth be with you.";
         holiday_tagline.innerText = "Woosh woosh! (lightsaber noises)";
+        decor1.src = "./images/blue.png";
+        decor2.src = "./images/red.png";
+        decor3.src = "./images/blue.png";
+        decor4.src = "./images/red.png";
+        decor5.src = "./images/blue.png";
     } else if (day === 5) {
         holiday_name.innerText = "!Feliz Cinco de Mayo!";
     } else {
         holiday_name.innerText = "Happy Mothers Day!!";
         holiday_tagline.innerText = "I love you Mom!";
+        decor1.src = "./images/pink.png";
+        decor2.src = "./images/purple.png";
+        decor3.src = "./images/pink.png";
+        decor4.src = "./images/purple.png";
+        decor5.src = "./images/pink.png";
     };
 } else if (month === 6) {
     holiday_name.innerText = "Happy Summer!";
@@ -149,10 +167,4 @@ if (month === 1) {
 } else {
     holiday_name.innerText = "Error";
     holiday_tagline.innerText = "Contact the Dev and let them know the month didn't register correctly.";
-    decor1.src = "";
-    decor2.src = "";
-    decor3.src = "";
-    decor4.src = "";
-    decor5.src = "";
-    background_image.src = "./images/No_Image.PNG";
 };
