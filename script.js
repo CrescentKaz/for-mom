@@ -12,7 +12,7 @@ const monthFolder = today.getMonth();
 const year = today.getFullYear();
 const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
 const folderPath = "/images/" + months[monthFolder] + "/";
-const backgroundImageUrl = getRandomImage(folderPath);
+// const backgroundImageUrl = getRandomImage(folderPath);
 
 /*
 document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
@@ -39,6 +39,8 @@ function moveLocation(item) {
     item.style.top = newTop + "px";
     console.log("moveLocation triggered for " + item)
 } 
+
+// is it possible to update this giant if/else into a function and array like i did with The Cave?
 
 if (month === 1) {
     holiday_name.innerText = "Happy New Year!";
