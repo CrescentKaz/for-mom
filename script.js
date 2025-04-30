@@ -84,13 +84,14 @@ if (month === 1) {
     } else if (day === 5) {
         holiday_name.innerText = "!Feliz Cinco de Mayo!";
     } else {
-        holiday_name.innerText = "Happy Mothers Day!!";
+        holiday_name.innerText = "Happy Mothers Month!!";
         holiday_tagline.innerText = "I love you Mom!";
         decor1.src = "./images/pink.png";
         decor2.src = "./images/purple.png";
         decor3.src = "./images/pink.png";
         decor4.src = "./images/purple.png";
         decor5.src = "./images/pink.png";
+        background_image.src = "./images/gold_confetti_fountains.gif";
     };
 } else if (month === 6) {
     holiday_name.innerText = "Happy Summer!";
