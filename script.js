@@ -5,6 +5,9 @@ const decor4 = document.getElementById("decor4");
 const decor5 = document.getElementById("decor5");
 const background_image = document.getElementById("background-image");
 
+const red_balloon = "./images/red.png";
+const blue_balloon = "./images/blue.png";
+
 const today = new Date();
 const day = today.getDate()+1;
 const month = today.getMonth()+1;
@@ -41,6 +44,18 @@ function moveLocation(item) {
 } 
 
 // is it possible to update this giant if/else into a function and array like i did with The Cave?
+// i'd like to try
+
+const visuals = [
+    {
+        
+        "main_title": ["Happy New Year!"],
+        "sub_title": [year, ],
+        "decor_item": [red_balloon, blue_balloon, ]
+    }
+]
+
+
 
 if (month === 1) {
     holiday_name.innerText = "Happy New Year!";
