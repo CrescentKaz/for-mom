@@ -31,7 +31,7 @@ main {
   z-index: -1;
 }
 
-h1, h2 {
+.words {
   display: flex;
   align-items: center;
   justify-content: center;

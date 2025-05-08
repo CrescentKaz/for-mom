@@ -14,9 +14,7 @@ const months = ["january", "february", "march", "april", "may", "june", "july", 
 const folderPath = "/images/" + months[monthFolder] + "/";
 // const backgroundImageUrl = getRandomImage(folderPath);
 
-/*
-document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
-*/
+// document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
 
 /*
 function getRandomImage(folder) {
@@ -27,12 +25,9 @@ function getRandomImage(folder) {
 }
 */
 
-// the line below still isn't triggering
-// decor1.addEventListener("click", moveLocation(decor1));
-
 function moveLocation(item) {
-    const currentLeft = parseInt(item.style.left || 0);
-    const currentTop = parseInt(item.style.top || 0);
+//    const currentLeft = parseInt(item.style.left || 0);
+//    const currentTop = parseInt(item.style.top || 0);
     const newLeft = Math.floor(Math.random() * (window.innerWidth - item.width));
     const newTop = Math.floor(Math.random() * (window.innerHeight - item.height));
     item.style.left = newLeft + "px"; 
