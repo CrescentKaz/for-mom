@@ -7,19 +7,21 @@ const background_image = document.getElementById("background-image");
 
 const red_balloon = "./images/red.png";
 const blue_balloon = "./images/blue.png";
+const pink_balloon = "./images/pink.png";
+const green_balloon = "./images/green.png";
+const orange_balloon = "./images/orange.png";
+const purple_balloon = "./images/purple.png";
+const tan_balloon = "./images/tan.png";
 
 const today = new Date();
 const day = today.getDate()+1;
-const month = today.getMonth()+1;
-const monthFolder = today.getMonth();
+const month = today.getMonth();
 const year = today.getFullYear();
-const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
-const folderPath = "/images/" + months[monthFolder] + "/";
+const months = ["01jan", "02feb", "03mar", "04apr", "05may", "06jun", "07jul", "08aug", "09sep", "10oct", "11nov", "12dec"];
+const folderPath = "/images/" + months[month] + "/";
 // const backgroundImageUrl = getRandomImage(folderPath);
 
-/*
-document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
-*/
+//document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
 
 /*
 function getRandomImage(folder) {
@@ -30,12 +32,9 @@ function getRandomImage(folder) {
 }
 */
 
-// the line below still isn't triggering
-// decor1.addEventListener("click", moveLocation(decor1));
-
 function moveLocation(item) {
-    const currentLeft = parseInt(item.style.left || 0);
-    const currentTop = parseInt(item.style.top || 0);
+//    const currentLeft = parseInt(item.style.left || 0);
+//    const currentTop = parseInt(item.style.top || 0);
     const newLeft = Math.floor(Math.random() * (window.innerWidth - item.width));
     const newTop = Math.floor(Math.random() * (window.innerHeight - item.height));
     item.style.left = newLeft + "px"; 
@@ -46,38 +45,104 @@ function moveLocation(item) {
 // is it possible to update this giant if/else into a function and array like i did with The Cave?
 // i'd like to try
 
-const visuals = [
+const visualsM = [
     {
-        
-        "main_title": ["Happy New Year!"],
-        "sub_title": [year, ],
-        "decor_item": [red_balloon, blue_balloon, ]
+        name: "01jan",
+        "main_title": "Happy New Year!",
+        "sub_title": year,
+        "decor_item": [tan_balloon, tan_balloon, tan_balloon, tan_balloon, tan_balloon],
+        haveDay: false
+    },
+    {
+        name: "02feb",
+        "main_title": "Happy Valentine's Day",
+        "sub_title": "OXO <3 <3 <3 XOX",
+        "decor_item": [red_balloon, pink_balloon, red_balloon, pink_balloon, red_balloon],
+        haveDay: false
+    }, 
+    {
+        name: "03mar",
+        "main_title": "Happy St. Patrick's Day",
+        "sub_title": "May luck be with you",
+        "decor_item": [green_balloon, green_balloon, green_balloon, green_balloon, green_balloon],
+        haveDay: false
+    },
+    {
+        name: "04apr",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: true
+    },
+    {
+        name: "05may",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "06jun",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "07jul",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "08aug",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "09sep",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "10oct",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "11nov",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: false
+    },
+    {
+        name: "12dec",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": [],
+        haveDay: true
     }
-]
+];
 
+const visualsD = [
+    {
+        // name = today
+        name: "",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": []
+    }
+];
 
-
-if (month === 1) {
-    holiday_name.innerText = "Happy New Year!";
-    holiday_tagline.innerText = year;
-    background_image.src = "./images/gold_confetti_fountains.gif";
-} else if (month === 2) {
-    holiday_name.innerText = "Happy Valentine's Day";
-    holiday_tagline.innerText = "OXO <3 <3 <3 XOX";
-    decor1.src = "./images/red.png";
-    decor2.src = "./images/pink.png";
-    decor3.src = "./images/red.png";
-    decor4.src = "./images/pink.png";
-    decor5.src = "./images/red.png";
-} else if (month === 3) {
-    holiday_name.innerText = "Happy St. Patrick's Day";
-    holiday_tagline.innerText = "May luck be with you";
-    decor1.src = "./images/green.png";
-    decor2.src = "./images/green.png";
-    decor3.src = "./images/green.png";
-    decor4.src = "./images/green.png";
-    decor5.src = "./images/green.png";
-    background_image.src = "./images/gold_confetti_fountains.gif";
+/*
 } else if (month === 4) {
     if (day === 1) {
         holiday_name.innerText = "Happy April Fools!";
@@ -186,3 +251,34 @@ if (month === 1) {
     holiday_name.innerText = "Error";
     holiday_tagline.innerText = "Contact the Dev and let them know the month didn't register correctly.";
 };
+*/
+
+function updatePageM(visualsM) {
+    holiday_name.innerText = visuals.main_title;
+    holiday_tagline.innerText = visuals.sub_title;
+    decor1.src = visuals[decor_item][0];
+    decor2.src = visuals[decor_item][1];
+    decor3.src = visuals[decor_item][2];
+    decor4.src = visuals[decor_item][3];
+    decor5.src = visuals[decor_item][4];
+}
+
+function updatePageD(visualsD) {
+    holiday_name.innerText = visuals.main_title;
+    holiday_tagline.innerText = visuals.sub_title;
+    decor1.src = visuals[decor_item][0];
+    decor2.src = visuals[decor_item][1];
+    decor3.src = visuals[decor_item][2];
+    decor4.src = visuals[decor_item][3];
+    decor5.src = visuals[decor_item][4];
+}
+
+function howSpecific() {
+    if (visualsM.haveDay) {
+        updatePageD(visualsD.name[today]);
+    } else {
+        updatePageM(visualsM[month]);
+    }
+};
+
+howSpecific();
