@@ -20,6 +20,7 @@ const year = today.getFullYear();
 const months = ["01jan", "02feb", "03mar", "04apr", "05may", "06jun", "07jul", "08aug", "09sep", "10oct", "11nov", "12dec"];
 const folderPath = "/images/" + months[month] + "/";
 // const backgroundImageUrl = getRandomImage(folderPath);
+const specificDate = months[month] + "_" + day;
 
 //document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
 
@@ -50,92 +51,235 @@ const visualsM = [
         name: "01jan",
         "main_title": "Happy New Year!",
         "sub_title": year,
-        "decor_item": [tan_balloon, tan_balloon, tan_balloon, tan_balloon, tan_balloon],
-        haveDay: false
+        "decor_item": [tan_balloon, tan_balloon, tan_balloon, tan_balloon, tan_balloon]
     },
     {
         name: "02feb",
         "main_title": "Happy Valentine's Day",
         "sub_title": "OXO <3 <3 <3 XOX",
-        "decor_item": [red_balloon, pink_balloon, red_balloon, pink_balloon, red_balloon],
-        haveDay: false
+        "decor_item": [red_balloon, pink_balloon, red_balloon, pink_balloon, red_balloon]
     }, 
     {
         name: "03mar",
         "main_title": "Happy St. Patrick's Day",
         "sub_title": "May luck be with you",
-        "decor_item": [green_balloon, green_balloon, green_balloon, green_balloon, green_balloon],
-        haveDay: false
+        "decor_item": [green_balloon, green_balloon, green_balloon, green_balloon, green_balloon]
     },
     {
         name: "04apr",
         "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: true
+        "sub_title": "April showers bring May flowers~",
+        "decor_item": [blue_balloon, green_balloon, pink_balloon, orange_balloon, purple_balloon]
     },
     {
         name: "05may",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "Happy Mother's Month!!",
+        "sub_title": "I love you Mom!",
+        "decor_item": [pink_balloon, purple_balloon, pink_balloon, purple_balloon, pink_balloon]
     },
     {
         name: "06jun",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "Happy Summer!",
+        "sub_title": "Iced tea in my hand and toes in the sand~",
+        "decor_item": []
     },
     {
         name: "07jul",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "Happy Summer!",
+        "sub_title": "Iced tea in my hand and toes in the sand~",
+        "decor_item": []
     },
     {
         name: "08aug",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "Happy Back-To-School Days!",
+        "sub_title": "Got your summer homework done?",
+        "decor_item": []
     },
     {
         name: "09sep",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "It's September.",
+        "sub_title": "It's too hot in Texas to think of anything for this month.",
+        "decor_item": []
     },
     {
         name: "10oct",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "Happy Halloween!~",
+        "sub_title": "It's the spooky season of fear and terror~",
+        "decor_item": []
     },
     {
         name: "11nov",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: false
+        "main_title": "Happy Thanksgiving!",
+        "sub_title": "Thankful for my Mom and all my family.",
+        "decor_item": []
     },
     {
         name: "12dec",
-        "main_title": "",
-        "sub_title": "",
-        "decor_item": [],
-        haveDay: true
+        "main_title": "Merry Christmas!",
+        "sub_title": "No peeking at your presents!",
+        "decor_item": []
     }
 ];
 
 const visualsD = [
     {
-        // name = today
-        name: "",
+        name: "04apr_01",
+        "main_title": "Happy April Fools!",
+        "sub_title": "",
+        "decor_item": [blue_balloon, green_balloon, pink_balloon, orange_balloon, purple_balloon]
+    },
+    {
+        name: "05May_04",
+        "main_title": "May the fourth be with you.",
+        "sub_title": "Woosh woosh! (lightsaber noises)",
+        "decor_item": [blue_balloon, red_balloon, blue_balloon, red_balloon, blue_balloon]
+    },
+    {
+        name: "05May_05",
+        "main_title": "!Feliz Cinco de Mayo!",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "07jul_01",
+        "main_title": "Happy Fourth of July!",
+        "sub_title": "(insert fireworks here)",
+        "decor_item": []
+    },
+    {
+        name: "07jul_02",
+        "main_title": "Happy Fourth of July!",
+        "sub_title": "(insert fireworks here)",
+        "decor_item": []
+    },
+    {
+        name: "07jul_03",
+        "main_title": "Happy Fourth of July!",
+        "sub_title": "(insert fireworks here)",
+        "decor_item": []
+    },
+    {
+        name: "07jul_04",
+        "main_title": "Happy Fourth of July!",
+        "sub_title": "(insert fireworks here)",
+        "decor_item": []
+    },
+    {
+        name: "07jul_05",
+        "main_title": "Happy Fourth of July!",
+        "sub_title": "(insert fireworks here)",
+        "decor_item": []
+    },
+    {
+        name: "11nov_28",
+        "main_title": "Happy Birthday Mom!",
+        "sub_title": "Hope your birthday is amazing! I love you!!!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_14",
+        "main_title": "On the first day of Christmas my true love gave to me:",
+        "sub_title": "A partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_15",
+        "main_title": "On the second day of Christmas my true love gave to me:",
+        "sub_title": "2 turtle doves, and a partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_16",
+        "main_title": "On the third day of Christmas my true love gave to me:",
+        "sub_title": "3 French hens, 2 turtle doves, and a partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_17",
+        "main_title": "On the fourth day of Christmas my true love gave to me:",
+        "sub_title": "4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_18",
+        "main_title": "On the fifth day of Christmas my true love gave to me:",
+        "sub_title": "5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_19",
+        "main_title": "On the sixth day of Christmas my true love gave to me:",
+        "sub_title": "6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_20",
+        "main_title": "On the seventh day of Christmas my true love gave to me:",
+        "sub_title": "7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
+        "decor_item": []
+    },
+    {
+        name: "12dec_21",
+        "main_title": "On the eighth day of Christmas my true love gave to me:",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_22",
+        "main_title": "On the ninth day of Christmas my true love gave to me:",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_23",
+        "main_title": "On the tenth day of Christmas my true love gave to me:",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_24",
+        "main_title": "On the eleventh day of Christmas my true love gave to me:",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_25",
+        "main_title": "Merry Christmas!",
+        "sub_title": "On the 12th day of Christmas my true love gave to me:",
+        "decor_item": []
+    },
+    {
+        name: "12dec_26",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_27",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_28",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_29",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_30",
+        "main_title": "",
+        "sub_title": "",
+        "decor_item": []
+    },
+    {
+        name: "12dec_31",
         "main_title": "",
         "sub_title": "",
         "decor_item": []
@@ -143,107 +287,26 @@ const visualsD = [
 ];
 
 /*
-} else if (month === 4) {
-    if (day === 1) {
-        holiday_name.innerText = "Happy April Fools!";
-    } else {
-        holiday_tagline.innerText = "April showers bring May flowers~";
-    };
-    decor1.src = "./images/blue.png";
-    decor2.src = "./images/green.png";
-    decor3.src = "./images/pink.png";
-    decor4.src = "./images/orange.png";
-    decor5.src = "./images/purple.png";
-} else if (month === 5) {
-    if (day === 4) {
-        holiday_name.innerText = "May the fourth be with you.";
-        holiday_tagline.innerText = "Woosh woosh! (lightsaber noises)";
-        decor1.src = "./images/blue.png";
-        decor2.src = "./images/red.png";
-        decor3.src = "./images/blue.png";
-        decor4.src = "./images/red.png";
-        decor5.src = "./images/blue.png";
-    } else if (day === 5) {
-        holiday_name.innerText = "!Feliz Cinco de Mayo!";
-    } else {
-        holiday_name.innerText = "Happy Mothers Month!!";
-        holiday_tagline.innerText = "I love you Mom!";
-        decor1.src = "./images/pink.png";
-        decor2.src = "./images/purple.png";
-        decor3.src = "./images/pink.png";
-        decor4.src = "./images/purple.png";
-        decor5.src = "./images/pink.png";
-        background_image.src = "./images/gold_confetti_fountains.gif";
-    };
-} else if (month === 6) {
-    holiday_name.innerText = "Happy Summer!";
-    holiday_tagline.innerText = "Iced tea in my hand and toes in the sand~";
-} else if (month === 7) {
-    if (day < 6) {
-        holiday_name.innerText = "Happy Fourth of July!";
-        holiday_tagline.innerText = "(insert fireworks here)";
-    } else {
-        holiday_name.innerText = "Happy Summer!";
-        holiday_tagline.innerText = "Iced tea in my hand and toes in the sand~";
-    }
-} else if (month === 8) {
-    holiday_name.innerText = "Happy Back-To-School Days!";
-    holiday_tagline.innerText = "Got your summer homework done?";
-} else if (month === 9) {
-    holiday_name.innerText = "It's September.";
-    holiday_tagline.innerText = "It's too hot in Texas to think of anything for this month.";
-} else if (month === 10) {
-    holiday_name.innerText = "Happy Halloween!~";
-    holiday_tagline.innerText = "It's the spooky season of fear and terror~";
-} else if (month === 11) {
-    if (day === 28) {
-        holiday_name.innerText = "Happy Birthday Mom!";
-        holiday_tagline.innerText = "Hope your birthday is amazing! I love you!!!";
-    } else {
-        holiday_name.innerText = "Happy Thanksgiving!";
-        holiday_tagline.innerText = "Thankful for my Mom and all my family.";
-    }
 } else if (month === 12) {
-    if (day < 14) {
-        holiday_name.innerText = "Merry Christmas!";
-        holiday_tagline.innerText = "No peeking at your presents!";
-    } else if (day === 14) {
-        holiday_name.innerText = "On the first day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: a partridge in a pear tree!";
-    } else if (day === 15) {
-        holiday_name.innerText = "On the second day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 16) {
-        holiday_name.innerText = "On the third day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 17) {
-        holiday_name.innerText = "On the fourth day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 18) {
-        holiday_name.innerText = "On the fifth day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 19) {
-        holiday_name.innerText = "On the sixth day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
     } else if (day === 20) {
         holiday_name.innerText = "On the seventh day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
+";
     } else if (day === 21) {
         holiday_name.innerText = "On the eighth day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
+8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
     } else if (day === 22) {
         holiday_name.innerText = "On the ninth day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
+9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
     } else if (day === 23) {
         holiday_name.innerText = "On the tenth day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
+10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
     } else if (day === 24) {
         holiday_name.innerText = "On the eleventh day of Christmas";
-        holiday_tagline.innerText = "my true love gave to me: 11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
+11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
     } else if (day === 25) {
         holiday_name.innerText = "Merry Christmas!";
         holiday_tagline.innerText = "On the 12th day of Christmas my true love gave to me: 12 drummers drumming, 11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else {
+    } else if (day > 25) {
         holiday_name.innerText = "Merry Christmas!";
         holiday_tagline.innerText = "Let it snow! Let it snow! Let it snow!";
     };
@@ -254,31 +317,31 @@ const visualsD = [
 */
 
 function updatePageM(visualsM) {
-    holiday_name.innerText = visuals.main_title;
-    holiday_tagline.innerText = visuals.sub_title;
-    decor1.src = visuals[decor_item][0];
-    decor2.src = visuals[decor_item][1];
-    decor3.src = visuals[decor_item][2];
-    decor4.src = visuals[decor_item][3];
-    decor5.src = visuals[decor_item][4];
+    holiday_name.innerText = visualsM.main_title;
+    holiday_tagline.innerText = visualsM.sub_title;
+    decor1.src = visualsM[decor_item][0];
+    decor2.src = visualsM[decor_item][1];
+    decor3.src = visualsM[decor_item][2];
+    decor4.src = visualsM[decor_item][3];
+    decor5.src = visualsM[decor_item][4];
 }
 
 function updatePageD(visualsD) {
-    holiday_name.innerText = visuals.main_title;
-    holiday_tagline.innerText = visuals.sub_title;
-    decor1.src = visuals[decor_item][0];
-    decor2.src = visuals[decor_item][1];
-    decor3.src = visuals[decor_item][2];
-    decor4.src = visuals[decor_item][3];
-    decor5.src = visuals[decor_item][4];
+    holiday_name.innerText = visualsD.main_title;
+    holiday_tagline.innerText = visualsD.sub_title;
+    decor1.src = visualsD[decor_item][0];
+    decor2.src = visualsD[decor_item][1];
+    decor3.src = visualsD[decor_item][2];
+    decor4.src = visualsD[decor_item][3];
+    decor5.src = visualsD[decor_item][4];
 }
 
 function howSpecific() {
-    if (visualsM.haveDay) {
-        updatePageD(visualsD.name[today]);
+    if(visualsD.name[specificDate]) {
+        updatePageD(visualsD.name[specificDate]);
     } else {
         updatePageM(visualsM[month]);
-    }
+    };
 };
 
 howSpecific();
