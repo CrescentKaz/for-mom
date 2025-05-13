@@ -41,7 +41,7 @@ function moveLocation(item) {
     const newTop = Math.floor(Math.random() * (window.innerHeight - item.height));
     item.style.left = newLeft + "px"; 
     item.style.top = newTop + "px";
-    console.log("moveLocation triggered for " + item)
+    console.log("moveLocation triggered for " + item);
 } 
 
 const visualsM = [
