@@ -38,6 +38,7 @@ h1, h2 {
   z-index: -1;
   width: auto;
   height: auto;
+  text-shadow: 2px black;
 }
 
 #decor-space {

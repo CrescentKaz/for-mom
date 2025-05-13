@@ -22,6 +22,9 @@ const folderPath = "/images/" + months[month] + "/";
 // const backgroundImageUrl = getRandomImage(folderPath);
 const specificDate = months[month] + "_" + day;
 
+const decHoliday = "Merry Christmas!";
+const decTag = "Let it snow! Let it snow! Let it snow!";
+
 //document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
 
 /*
@@ -34,17 +37,12 @@ function getRandomImage(folder) {
 */
 
 function moveLocation(item) {
-//    const currentLeft = parseInt(item.style.left || 0);
-//    const currentTop = parseInt(item.style.top || 0);
     const newLeft = Math.floor(Math.random() * (window.innerWidth - item.width));
     const newTop = Math.floor(Math.random() * (window.innerHeight - item.height));
     item.style.left = newLeft + "px"; 
     item.style.top = newTop + "px";
     console.log("moveLocation triggered for " + item)
 } 
-
-// is it possible to update this giant if/else into a function and array like i did with The Cave?
-// i'd like to try
 
 const visualsM = [
     {
@@ -221,100 +219,70 @@ const visualsD = [
     {
         name: "12dec_21",
         "main_title": "On the eighth day of Christmas my true love gave to me:",
-        "sub_title": "",
+        "sub_title": "8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
         "decor_item": []
     },
     {
         name: "12dec_22",
         "main_title": "On the ninth day of Christmas my true love gave to me:",
-        "sub_title": "",
+        "sub_title": "9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
         "decor_item": []
     },
     {
         name: "12dec_23",
         "main_title": "On the tenth day of Christmas my true love gave to me:",
-        "sub_title": "",
+        "sub_title": "10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
         "decor_item": []
     },
     {
         name: "12dec_24",
         "main_title": "On the eleventh day of Christmas my true love gave to me:",
-        "sub_title": "",
+        "sub_title": "11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
         "decor_item": []
     },
     {
         name: "12dec_25",
         "main_title": "Merry Christmas!",
-        "sub_title": "On the 12th day of Christmas my true love gave to me:",
+        "sub_title": "On the 12th day of Christmas my true love gave to me: 12 drummers drumming, 11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!",
         "decor_item": []
     },
     {
         name: "12dec_26",
-        "main_title": "",
-        "sub_title": "",
+        "main_title": decHoliday,
+        "sub_title": decTag,
         "decor_item": []
     },
     {
         name: "12dec_27",
-        "main_title": "",
-        "sub_title": "",
+        "main_title": decHoliday,
+        "sub_title": decTag,
         "decor_item": []
     },
     {
         name: "12dec_28",
-        "main_title": "",
-        "sub_title": "",
+        "main_title": decHoliday,
+        "sub_title": decTag,
         "decor_item": []
     },
     {
         name: "12dec_29",
-        "main_title": "",
-        "sub_title": "",
+        "main_title": decHoliday,
+        "sub_title": decTag,
         "decor_item": []
     },
     {
         name: "12dec_30",
-        "main_title": "",
-        "sub_title": "",
+        "main_title": decHoliday,
+        "sub_title": decTag,
         "decor_item": []
     },
     {
         name: "12dec_31",
-        "main_title": "",
-        "sub_title": "",
+        "main_title": "Happy New Years Eve!",
+        "sub_title": year,
         "decor_item": []
     }
 ];
-
-/*
-} else if (month === 12) {
-    } else if (day === 20) {
-        holiday_name.innerText = "On the seventh day of Christmas";
-";
-    } else if (day === 21) {
-        holiday_name.innerText = "On the eighth day of Christmas";
-8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 22) {
-        holiday_name.innerText = "On the ninth day of Christmas";
-9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 23) {
-        holiday_name.innerText = "On the tenth day of Christmas";
-10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 24) {
-        holiday_name.innerText = "On the eleventh day of Christmas";
-11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day === 25) {
-        holiday_name.innerText = "Merry Christmas!";
-        holiday_tagline.innerText = "On the 12th day of Christmas my true love gave to me: 12 drummers drumming, 11 pipers piping, 10 lords a-leaping, 9 ladies dancing, 8 maids a-milking, 7 swans a-swimming, 6 geese a-laying, 5 golden rings, 4 calling birds, 3 French hens, 2 turtle doves, and a partridge in a pear tree!";
-    } else if (day > 25) {
-        holiday_name.innerText = "Merry Christmas!";
-        holiday_tagline.innerText = "Let it snow! Let it snow! Let it snow!";
-    };
-} else {
-    holiday_name.innerText = "Error";
-    holiday_tagline.innerText = "Contact the Dev and let them know the month didn't register correctly.";
-};
-*/
 
 function updatePageM(visualsM) {
     holiday_name.innerText = visualsM.main_title;
