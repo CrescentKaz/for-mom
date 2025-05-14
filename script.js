@@ -14,7 +14,7 @@ const purple_balloon = "./images/purple.png";
 const tan_balloon = "./images/tan.png";
 
 const today = new Date();
-const day = today.getDate()+1;
+const day = today.getDate();
 const month = today.getMonth();
 const year = today.getFullYear();
 const months = ["01jan", "02feb", "03mar", "04apr", "05may", "06jun", "07jul", "08aug", "09sep", "10oct", "11nov", "12dec"];
@@ -305,10 +305,10 @@ function updatePageD(visualsD) {
 }
 
 function howSpecific() {
-    if(visualsD.name[specificDate]) {
-        updatePageD(visualsD.name[specificDate]);
-    } else {
+    if(visualsD.name[specificDate] === undefined) {
         updatePageM(visualsM[month]);
+    } else {
+        updatePageD(visualsD.name[specificDate]);
     };
 };
 
