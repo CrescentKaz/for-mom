@@ -20,7 +20,7 @@ const year = today.getFullYear();
 const months = ["01jan", "02feb", "03mar", "04apr", "05may", "06jun", "07jul", "08aug", "09sep", "10oct", "11nov", "12dec"];
 const folderPath = "/images/" + months[month] + "/";
 // const backgroundImageUrl = getRandomImage(folderPath);
-const specificDate = months[month] + "_" + day;
+const specificDate = "\"" + months[month] + "_" + day + "\"";
 
 const decHoliday = "Merry Christmas!";
 const decTag = "Let it snow! Let it snow! Let it snow!";
