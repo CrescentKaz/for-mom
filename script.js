@@ -1,3 +1,5 @@
+const testing = true;
+
 const decor1 = document.getElementById("decor1");
 const decor2 = document.getElementById("decor2");
 const decor3 = document.getElementById("decor3");
@@ -292,6 +294,9 @@ function updatePageM(visualsM) {
     decor3.src = visualsM[decor_item][2];
     decor4.src = visualsM[decor_item][3];
     decor5.src = visualsM[decor_item][4];
+    if (testing) {
+        console.log("decor1 (month) source is: " + visualsM[decor_item][0]);
+    }
 }
 
 function updatePageD(visualsD) {
@@ -302,6 +307,9 @@ function updatePageD(visualsD) {
     decor3.src = visualsD[decor_item][2];
     decor4.src = visualsD[decor_item][3];
     decor5.src = visualsD[decor_item][4];
+    if (testing) {
+        console.log("decor1 (day) source is: " + visualsD[decor_item][0]);
+    }
 }
 
 function howSpecific() {
