@@ -127,13 +127,13 @@ const visualsD = [
         "decor_item": [blue_balloon, green_balloon, pink_balloon, orange_balloon, purple_balloon]
     },
     {
-        name: "05May_04",
+        name: "05may_04",
         "main_title": "May the fourth be with you.",
         "sub_title": "Woosh woosh! (lightsaber noises)",
         "decor_item": [blue_balloon, red_balloon, blue_balloon, red_balloon, blue_balloon]
     },
     {
-        name: "05May_05",
+        name: "05may_05",
         "main_title": "!Feliz Cinco de Mayo!",
         "sub_title": "",
         "decor_item": []
@@ -305,10 +305,10 @@ function updatePageD(visualsD) {
 }
 
 function howSpecific() {
-    if(visualsD.name[specificDate] === undefined) {
-        updatePageM(visualsM[month]);
-    } else {
+    if(visualsD.some(visualsD => visualsD.name === specificDate)) {
         updatePageD(visualsD.name[specificDate]);
+    } else {
+        updatePageM(visualsM[month]);
     };
 };
 
