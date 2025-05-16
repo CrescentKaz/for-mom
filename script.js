@@ -289,11 +289,11 @@ const visualsD = [
 function updatePageM(visualsM) {
     holiday_name.innerText = visualsM.main_title;
     holiday_tagline.innerText = visualsM.sub_title;
-    decor1.src = visualsM[decor_item][0];
-    decor2.src = visualsM[decor_item][1];
-    decor3.src = visualsM[decor_item][2];
-    decor4.src = visualsM[decor_item][3];
-    decor5.src = visualsM[decor_item][4];
+    decor1.src = visualsM.decor_item[0];
+    decor2.src = visualsM.decor_item[1];
+    decor3.src = visualsM.decor_item[2];
+    decor4.src = visualsM.decor_item[3];
+    decor5.src = visualsM.decor_item[4];
     if (testing) {
         console.log("decor1 (month) source is: " + visualsM[decor_item][0]);
     }
@@ -302,11 +302,11 @@ function updatePageM(visualsM) {
 function updatePageD(visualsD) {
     holiday_name.innerText = visualsD.main_title;
     holiday_tagline.innerText = visualsD.sub_title;
-    decor1.src = visualsD[decor_item][0];
-    decor2.src = visualsD[decor_item][1];
-    decor3.src = visualsD[decor_item][2];
-    decor4.src = visualsD[decor_item][3];
-    decor5.src = visualsD[decor_item][4];
+    decor1.src = visualsD.decor_item[0];
+    decor2.src = visualsD.decor_item[1];
+    decor3.src = visualsD.decor_item[2];
+    decor4.src = visualsD.decor_item[3];
+    decor5.src = visualsD.decor_item[4];
     if (testing) {
         console.log("decor1 (day) source is: " + visualsD[decor_item][0]);
     }
