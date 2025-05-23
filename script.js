@@ -21,22 +21,20 @@ const month = today.getMonth();
 const year = today.getFullYear();
 const months = ["01jan", "02feb", "03mar", "04apr", "05may", "06jun", "07jul", "08aug", "09sep", "10oct", "11nov", "12dec"];
 const folderPath = "/images/" + months[month] + "/";
-// const backgroundImageUrl = getRandomImage(folderPath);
+const backgroundImageUrl = getRandomImage(folderPath);
 const specificDate = "\"" + months[month] + "_" + day + "\"";
 
 const decHoliday = "Merry Christmas!";
 const decTag = "Let it snow! Let it snow! Let it snow!";
 
-//document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
+document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
 
-/*
 function getRandomImage(folder) {
 // images are hard-coded. need to find a way to generate this automatically. iterate over a loop? might have issues with access to the folder contents
-    const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+    const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     return folder + randomImage;
 }
-*/
 
 function moveLocation(item) {
     const newLeft = Math.floor(Math.random() * (window.innerWidth - item.width));
