@@ -293,7 +293,7 @@ function updatePageM(visualsM) {
     decor4.src = visualsM.decor_item[3];
     decor5.src = visualsM.decor_item[4];
     if (testing) {
-        console.log("decor1 (month) source is: " + visualsM[decor_item][0]);
+        console.log("decor1 (month) source is: " + visualsM.decor_item[0]);
     }
 }
 
@@ -306,7 +306,7 @@ function updatePageD(visualsD) {
     decor4.src = visualsD.decor_item[3];
     decor5.src = visualsD.decor_item[4];
     if (testing) {
-        console.log("decor1 (day) source is: " + visualsD[decor_item][0]);
+        console.log("decor1 (day) source is: " + visualsD.decor_item[0]);
     }
 }
 
