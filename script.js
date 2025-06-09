@@ -27,13 +27,12 @@ const specificDate = "\"" + months[month] + "_" + day + "\"";
 const decHoliday = "Merry Christmas!";
 const decTag = "Let it snow! Let it snow! Let it snow!";
 
-document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
-
 function getRandomImage(folder) {
 // images are hard-coded. need to find a way to generate this automatically. iterate over a loop? might have issues with access to the folder contents
     const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
-    return folder + randomImage;
+    const answer = folder + randomImage;
+    return answer;
 }
 
 function moveLocation(item) {
@@ -79,43 +78,43 @@ const visualsM = [
         name: "06jun",
         "main_title": "Happy Summer!",
         "sub_title": "Iced tea in my hand and toes in the sand~",
-        "decor_item": []
+        "decor_item": [red_balloon, orange_balloon, pink_balloon, red_balloon, orange_balloon]
     },
     {
         name: "07jul",
         "main_title": "Happy Summer!",
         "sub_title": "Iced tea in my hand and toes in the sand~",
-        "decor_item": []
+        "decor_item": [orange_balloon, red_balloon, orange_balloon, red_balloon, orange_balloon]
     },
     {
         name: "08aug",
         "main_title": "Happy Back-To-School Days!",
         "sub_title": "Got your summer homework done?",
-        "decor_item": []
+        "decor_item": [blue_balloon, purple_balloon, green_balloon, red_balloon, orange_balloon]
     },
     {
         name: "09sep",
         "main_title": "It's September.",
         "sub_title": "It's too hot in Texas to think of anything for this month.",
-        "decor_item": []
+        "decor_item": [red_balloon, red_balloon, red_balloon, red_balloon, red_balloon]
     },
     {
         name: "10oct",
         "main_title": "Happy Halloween!~",
         "sub_title": "It's the spooky season of fear and terror~",
-        "decor_item": []
+        "decor_item": [purple_balloon, purple_balloon, orange_balloon, orange_balloon, orange_balloon]
     },
     {
         name: "11nov",
         "main_title": "Happy Thanksgiving!",
         "sub_title": "Thankful for my Mom and all my family.",
-        "decor_item": []
+        "decor_item": [tan_balloon, orange_balloon, red_balloon, tan_balloon, orange_balloon]
     },
     {
         name: "12dec",
         "main_title": "Merry Christmas!",
         "sub_title": "No peeking at your presents!",
-        "decor_item": []
+        "decor_item": [red_balloon, green_balloon, red_balloon, green_balloon, green_balloon]
     }
 ];
 
@@ -292,8 +291,10 @@ function updatePageM(visualsM) {
     decor3.src = visualsM.decor_item[2];
     decor4.src = visualsM.decor_item[3];
     decor5.src = visualsM.decor_item[4];
+    background_image.src = backgroundImageUrl;
     if (testing) {
         console.log("decor1 (month) source is: " + visualsM.decor_item[0]);
+        console.log("background loaded as " + backgroundImageUrl);
     }
 }
 
@@ -305,8 +306,10 @@ function updatePageD(visualsD) {
     decor3.src = visualsD.decor_item[2];
     decor4.src = visualsD.decor_item[3];
     decor5.src = visualsD.decor_item[4];
+    background_image.src = backgroundImageUrl;
     if (testing) {
         console.log("decor1 (day) source is: " + visualsD.decor_item[0]);
+        console.log("background loaded as " + backgroundImageUrl);
     }
 }
 
